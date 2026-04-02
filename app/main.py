@@ -1,7 +1,7 @@
-# write your code here
+import datetime
 from typing import List
-from cafe import Cafe
-from errors import VaccineError, NotWearingMaskError
+from app.cafe import Cafe
+from app.errors import VaccineError, NotWearingMaskError
 
 
 def go_to_cafe(friends: List[dict], cafe: Cafe) -> str:
@@ -23,9 +23,7 @@ def go_to_cafe(friends: List[dict], cafe: Cafe) -> str:
 
 
 if __name__ == "__main__":
-    # Приклад використання для самоперевірки
-    import datetime
-    
+    # Приклад використання
     kfc = Cafe("KFC")
     friends_list = [
         {
@@ -39,5 +37,5 @@ if __name__ == "__main__":
             "wearing_a_mask": False
         },
     ]
-    
+
     print(go_to_cafe(friends_list, kfc))
